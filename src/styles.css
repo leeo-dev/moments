@@ -1,7 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
 *, *::before, *::after {padding: 0; margin: 0; box-sizing: border-box;}
-html, body {font-family: 'Ubuntu', sans-serif;}
+html, body, textarea {font-family: 'Ubuntu', sans-serif;}
 li {list-style: none;}
 a {text-decoration: none; color: #100720; transition: .2s; font-weight: 400;}
 a:hover {color: #3400ED;}
 img {display: block; max-width: 100%;}
+
+/* FORMS */
+form {
+  max-width: 450px;
+  margin: 0 auto;
+  border: 2px solid #CED1E1;
+  border-radius: 5px;
+  padding: 32px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+label {
+  margin-bottom: 8px;
+}
+
+input, textarea {
+  font-size: 16px;
+  color: #21232F;
+  border: 2px solid #a4a7b4;
+  padding: .6em .8em;
+  border-radius: 5px;
+}
+
+
+
+input[type="submit"] {
+  background-color: #3400ED;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: .2s;
+}
+
+input:focus, textarea:focus {
+  outline-color: #5f6172;
+}
+
+input[type="submit"]:hover {
+  background-color: #2900BA;
+}
