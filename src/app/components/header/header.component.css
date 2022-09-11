@@ -1,0 +1,28 @@
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1em 4em;
+} 
+
+.brand img {
+  width: 120px;
+  transition: .3s;
+}
+.brand:hover > img {
+  opacity: .8;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a{
+  padding: 16px;
+}
+
+#add a  {
+  color: #3400ED
+}
