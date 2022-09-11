@@ -1,4 +1,4 @@
-interface Moment {
+export interface Moment {
   id?: number
   title: string
   description: string
