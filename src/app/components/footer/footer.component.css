@@ -1,0 +1,11 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 4em;
+}
+
+footer h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #696B79;
+}

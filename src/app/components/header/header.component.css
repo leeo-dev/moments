@@ -3,6 +3,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 1em 4em;
+background-color: #e7e8f1;
 } 
 
 .brand img {
@@ -19,7 +20,7 @@ padding: 1em 4em;
   justify-content: center;
 }
 
-a{
+.links a{
   padding: 16px;
 }
 
