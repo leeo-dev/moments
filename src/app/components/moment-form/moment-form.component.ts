@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup, FormControl, Validators  } from '@angular/forms'
 
 @Component({
   selector: 'app-moment-form',
@@ -7,9 +8,34 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MomentFormComponent implements OnInit {
   @Input() btnText!: string
+  momentForm!: FormGroup
   constructor() { }
 
   ngOnInit(): void {
+    this.momentForm = new FormGroup({
+      id: new FormControl(''),
+      title: new FormControl('', [Validators.required]),
+      description: new FormControl('', [Validators.required]),
+      image: new FormControl(''),
+    })
   }
+
+  get title() {
+    return this.momentForm.get('title')!
+  }
+  get description() {
+    return this.momentForm.get('title')!
+  }
+
+  submit(){
+    if (this.momentForm.invalid) return
+    console.log(this.momentForm.value)
+  }
+
+  onFilesSelected(event: any) {
+    const file: File = event.target.files[0]
+    this.momentForm.patchValue({image: file})
+  } 
+
 
 }

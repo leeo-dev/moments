@@ -30,6 +30,7 @@ input, textarea {
   border: 2px solid #a4a7b4;
   padding: .6em .8em;
   border-radius: 5px;
+  resize: vertical;
 }
 
 
@@ -48,4 +49,9 @@ input:focus, textarea:focus {
 
 input[type="submit"]:hover {
   background-color: #2900BA;
+}
+
+.validation-error {
+  color: #E12424;
+  margin-bottom: 4px;
 }
