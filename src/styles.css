@@ -55,3 +55,10 @@ input[type="submit"]:hover {
   color: #E12424;
   margin-bottom: 4px;
 }
+
+.edit-btn {padding: .4em 1em; font-size: 1em; margin: 0 .5em; cursor: pointer; color: #fff;background-color: #2900BA; border-radius: 4px}
+.remove-btn {padding: .4em 1em; font-size: 1em; margin: 0 .5em; cursor: pointer; color: #fff; background-color: #E12424; border: none; border-radius: 4px;}
+
+button fa-icon, a fa-icon {
+  margin-right: 0.2em;
+}
