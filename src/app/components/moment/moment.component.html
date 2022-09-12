@@ -11,7 +11,35 @@
       <button class="remove-btn" (click)="removeHandler(moment.id!)"><fa-icon [icon]="faTrash"></fa-icon>Delete</button>
     </div>
     <div class="comments">
-      <p>Comments (0)</p>
+      <h3>Comments ({{moment.comments!.length! > 0 ? moment.comments!.length > 0 : 0 }})</h3>
+      <div *ngIf="moment.comments!.length > 0; else noComments">
+        <p>com comentários</p>
+        <div class="comment" *ngFor="let comment of moment.comments">
+          <p class="text">{{comment.text}}</p>
+          <p class="author">por: {{comment.username}}</p>
+        </div>
+      </div>
+      <ng-template #noComments>
+        <p>Não há comentários</p>
+      </ng-template>
     </div>
+    <h3>Deixe um comentário: </h3>
+    <form class="comments-form" [formGroup]="commentForm" #formDir="ngForm" (ngSubmit)="onSubmit(formDir)">
+      <div class="form-group">
+        <label for="comment">Comentário: </label>
+        <div *ngIf="text.invalid && formDir.submitted">
+          <small class="validation-error" *ngIf="text?.errors?.['required']" >The comment is required</small>
+        </div>
+        <textarea placeholder="O que você vai comentar" formControlName="text" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="username">Nome: </label>
+        <div *ngIf="username.invalid && formDir.submitted">
+          <small class="validation-error" *ngIf="username.errors?.['required']" >title is required</small>
+        </div>
+        <input type="text" placeholder="Digite seu nome" formControlName="username" required>
+      </div>
+      <input type="submit" value="Comentar">
+    </form>
   <!-- Comentário -->
 </div>

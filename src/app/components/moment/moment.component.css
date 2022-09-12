@@ -12,7 +12,7 @@ h1 {
 }
 
 img {
-  max-width: 500px;
+  width: 350px;
   margin-bottom: 0 auto 1em;
 }
 
@@ -30,4 +30,25 @@ img {
 .comments {
   margin-bottom: 1em;
   padding: 1.5em;
+  width: 100%;
+}
+
+.comment-container  {
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  padding: 1m 0;
+  
+}
+
+.comments h3 {
+  margin-bottom: 2em;
+}
+
+.comments-form {
+  border: none;
+  width: 100%;
+}
+
+.comment {
+  margin-bottom: 2em;
 }
